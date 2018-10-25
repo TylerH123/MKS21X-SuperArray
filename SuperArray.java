@@ -41,11 +41,11 @@ public class SuperArray{
     return "[" + output + "]";
   }
   public String get(int index){
-    if (index < 0 || index >= size())return null;
+    if (index < 0 || index >= size())return "Invalid get call";
     return data[index];
   }
   public String set(int index, String element){
-    if (index < 0 || index >= size) return null;
+    if (index < 0 || index >= size) return "Invalid set call";
     String old = data[index];
     data[index] = element;
     return old;
@@ -63,5 +63,14 @@ public class SuperArray{
       if (data[i].equals(target)) return i;
     }
     return -1;
+  }
+  public int lastIndex(String target){
+    int lastidx = -1;
+    for (int i = 0; i < size; i++){
+      if (data[i].equals(target)){
+        lastidx = i;
+      }
+    }
+    return lastidx;
   }
 }
