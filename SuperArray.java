@@ -29,6 +29,7 @@ public class SuperArray{
   }
   private void resize(){
     String[] newArr = new String[data.length + 1];
+    data = newArr;
   }
   public String toString(){
     String output = "";
@@ -57,4 +58,5 @@ public class SuperArray{
     }
     return false;
   }
+  
 }
