@@ -7,14 +7,20 @@ public class Driver{
     System.out.println(arr.add("car") + "\tadd(car) expected: true");
     System.out.println(arr.size() + "\tsize() expected: 1");
     System.out.println(arr + "\ttoString() expected: [car]");
-    System.out.println(arr.set(1, "pen") + "\tset(1, pen) expected: null");
-    System.out.println(arr.size() + "\tsize() expected: 2");
-    System.out.println(arr + "\ttoString() expected: [pen]");
-    System.out.println(arr.get(0) + "\tget(0) expected: pen");
+    System.out.println(arr.set(1, "pen") + "\tset(1, pen) expected: error");
+    System.out.println(arr.size() + "\tsize() expected: 1");
+    System.out.println(arr + "\ttoString() expected: [car]");
+    System.out.println(arr.get(0) + "\tget(0) expected: car");
     System.out.println(arr.contains("pen") + "\tcontains(pen) expected: false");
     System.out.println(arr.contains("car") + "\tcontains(car) expected: true");
+    arr.add("chicken");
+    arr.add("2");
+    arr.add("coffee");
+    arr.add("apple");
+    arr.add("phone");
+    arr.add("test");
+    System.out.println(arr.indexOf("2") + "\tindexOf(2) expected: 2");
     /*
-    System.out.println();
     System.out.println();*/
   }
 }
