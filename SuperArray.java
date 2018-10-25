@@ -22,17 +22,18 @@ public class SuperArray{
     }
   }
   public boolean add(String s){
-    resize();
-    data[size-1] = s;
+    if (size == data.length)resize();
+    data[size] = s;
     size++;
     return true;
   }
   private void resize(){
-    String[] newArr = new String[size + 1];
+    String[] newArr = new String[data.length + 1];
   }
   public String toString(){
     String output = "";
-    for (int i = 0; i < size -1; i++){
+    if (size == 0) return "[]";
+    for (int i = 0; i < size-1 ; i++){
       output += data[i] + ", ";
     }
     output += data[size-1];
@@ -43,7 +44,7 @@ public class SuperArray{
     return data[index];
   }
   public String set(int index, String element){
-    if (index < 0 || index >= size()) return null;
+    if (index < 0 || index >= size) return null;
     String old = data[index];
     data[index] = element;
     return old;
