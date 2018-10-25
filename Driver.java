@@ -19,7 +19,9 @@ public class Driver{
     arr.add("apple");
     arr.add("phone");
     arr.add("test");
+    arr.add("coffee");
     System.out.println(arr.indexOf("2") + "\tindexOf(2) expected: 2");
+    System.out.println(arr.lastIndex("coffee") + "\tlastIndex(coffee) expected: 7");
     /*
     System.out.println();*/
   }
