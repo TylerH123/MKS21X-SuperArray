@@ -23,16 +23,16 @@ public class SuperArray{
   }
   public boolean add(String s){
     resize();
-    data[data.length-1] = s;
+    data[size-1] = s;
     size++;
     return true;
   }
   private void resize(){
-    String[] newArr = new String[data.length + 1];
+    String[] newArr = new String[size + 1];
   }
   public String toString(){
     String output = "";
-    for (int i = 0; i < data.length -1; i++){
+    for (int i = 0; i < size -1; i++){
       output += data[i] + ", ";
     }
     output += data[data.length-1];
@@ -49,7 +49,7 @@ public class SuperArray{
     return old;
   }
   public boolean contains(String target){
-    for (int i = 0; i < data.length; i++){
+    for (int i = 0; i < size; i++){
       if (data[i].equals(target)){
         return true;
       }
