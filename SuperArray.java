@@ -35,7 +35,7 @@ public class SuperArray{
     for (int i = 0; i < size -1; i++){
       output += data[i] + ", ";
     }
-    output += data[data.length-1];
+    output += data[size-1];
     return "[" + output + "]";
   }
   public String get(int index){

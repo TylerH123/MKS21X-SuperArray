@@ -2,7 +2,7 @@ public class Driver{
   public static void main(String[] arg){
     SuperArray arr = new SuperArray();
     System.out.println(arr.size() + "\nsize() expected: 0");
-    System.out.println(arr + "\ntoString() expected: [null, null, null, null, null, null, null, null, null, null]");
+    System.out.println(arr + "\ntoString() expected: [null]");
     System.out.println(arr.isEmpty() + "\nisEmpty() expected: true");
     System.out.println(arr.add("car") + "\nadd(car) expected: true");
     System.out.println(arr.size() + "\nsize() expected: 1");
