@@ -112,4 +112,33 @@ public class SuperArray{
     data = newArr;
     return output;
   }
+  public void remove2(int index){
+    String[] newArr = new String[data.length];
+    int idx2 = 0;
+    String output = data[index];
+    for (int i = 0; i < size; i++){
+      if (i == index){
+        i++;
+      }
+      newArr[idx2] = data[i];
+      idx2++;
+    }
+    size -= 2;
+    data = newArr;
+  }
+  public boolean remove(String element){
+    String[] newArr = new String[data.length];
+    int idx = 0;
+    boolean output = false;
+    for (int i = 0; i < size; i++){
+      if (data[i] == element){
+        output = true;
+        idx = i;
+      }
+    }
+    if (output == true){
+      remove2(idx);
+    }
+    return output;
+  }
 }
