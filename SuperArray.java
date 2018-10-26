@@ -29,6 +29,9 @@ public class SuperArray{
   }
   private void resize(){
     String[] newArr = new String[data.length + 1];
+    for (int i = 0; i < size; i++){
+      newArr[i] = data[i];
+    }
     data = newArr;
   }
   public String toString(){
@@ -72,5 +75,21 @@ public class SuperArray{
       }
     }
     return lastidx;
+  }
+  public void add(int index, String element){
+    if (index < 0 || index > size) System.out.println("Invalid index");
+    else{
+      if (size == data.length) resize();
+      String[] newArr = new String[data.length];
+      for (int i = 0; i < size; i++){
+        int idx2 = 0;
+        if (i == index){
+          newArr[i] = element;
+          idx2++;
+        }
+        newArr[idx2] = data[i];
+      }
+      data = newArr;
+    }
   }
 }

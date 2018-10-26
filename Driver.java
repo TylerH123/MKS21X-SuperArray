@@ -22,6 +22,7 @@ public class Driver{
     arr.add("coffee");
     System.out.println(arr.indexOf("2") + "\tindexOf(2) expected: 2");
     System.out.println(arr.lastIndex("coffee") + "\tlastIndex(coffee) expected: 7");
+    System.out.println(arr.set(1, "pen") + "\tset(1, pen) expected: chicken");
     /*
     System.out.println();*/
   }
