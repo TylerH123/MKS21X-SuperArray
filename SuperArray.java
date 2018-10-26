@@ -81,14 +81,18 @@ public class SuperArray{
     else{
       if (size == data.length) resize();
       String[] newArr = new String[data.length];
+      boolean copied = false;
+      int idx2 = 0;
       for (int i = 0; i < size; i++){
-        int idx2 = 0;
-        if (i == index){
-          newArr[i] = element;
+        if (idx2 == index && copied == false){
+          newArr[idx2] = element;
+          copied = true;
           idx2++;
         }
         newArr[idx2] = data[i];
+        idx2++;
       }
+      size++;
       data = newArr;
     }
   }
