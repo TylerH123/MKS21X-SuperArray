@@ -33,6 +33,7 @@ public class Driver{
     System.out.println(arr.remove("car") + "\tremove(car) expected: true");
     System.out.println(arr + "\ttoString() expected: [pen, 2, coffe, apple, phone, test, coffee]");
     System.out.println(arr.size() + "\tsize() expected: 7");
+    System.out.println(arr.remove("george") + "\tremove(george) expected: false");
     /*
     System.out.println();*/
   }
