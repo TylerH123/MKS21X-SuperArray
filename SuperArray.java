@@ -108,7 +108,7 @@ public class SuperArray{
       newArr[idx2] = data[i];
       idx2++;
     }
-    size -= 2;
+    size--;
     data = newArr;
     return output;
   }
@@ -123,7 +123,7 @@ public class SuperArray{
       newArr[idx2] = data[i];
       idx2++;
     }
-    size -= 2;
+    size--;
     data = newArr;
   }
   public boolean remove(String element){
