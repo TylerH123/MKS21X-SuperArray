@@ -96,4 +96,20 @@ public class SuperArray{
       data = newArr;
     }
   }
+  public String remove(int index){
+    if (index < 0 || index > size) return("Invalid index");
+    String[] newArr = new String[data.length];
+    int idx2 = 0;
+    String output = data[index];
+    for (int i = 0; i < size; i++){
+      if (i == index){
+        i++;
+      }
+      newArr[idx2] = data[i];
+      idx2++;
+    }
+    size--;
+    data = newArr;
+    return output;
+  }
 }
