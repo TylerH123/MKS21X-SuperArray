@@ -108,7 +108,7 @@ public class SuperArray{
       newArr[idx2] = data[i];
       idx2++;
     }
-    size--;
+    size -= 2;
     data = newArr;
     return output;
   }

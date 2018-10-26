@@ -26,7 +26,10 @@ public class Driver{
     System.out.println(arr + "\ttoString() expected: [car, pen, 2, coffee, apple, phone, test, coffee]");
     arr.add(2,"water");
     System.out.println(arr + "\ttoString() expected: [car, pen, water, 2, coffe, apple, phone, test, coffee]");
-    System.out.println(arr.size());
+    System.out.println(arr.size() + "\tsize() expected: 9");
+    System.out.println(arr.remove(2) + "\tremove(2) expected: water");
+    System.out.println(arr + "\ttoString() expected: [car, pen, 2, coffe, apple, phone, test, coffee]");
+    System.out.println(arr.size() + "\tsize() expected: 7");
     /*
     System.out.println();*/
   }
