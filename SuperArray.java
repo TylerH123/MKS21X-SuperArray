@@ -5,8 +5,11 @@ public class SuperArray{
     data = new String[10];
     size = 0;
   }
-  public SuperArray(int len){
-    data = new String[len];
+  public SuperArray(int initialCapacity){
+    if (initialCapacity < 0){
+      throw new IllegalArgumentException();
+    }
+    data = new String[initialCapacity];
     size = 0;
   }
   public void clear(){
@@ -44,11 +47,11 @@ public class SuperArray{
     return "[" + output + "]";
   }
   public String get(int index){
-    if (index < 0 || index >= size())return "Invalid get call";
+    if (index < 0 || index >= size())throw new ArrayIndexOutOfBoundsException();
     return data[index];
   }
   public String set(int index, String element){
-    if (index < 0 || index >= size) return "Invalid set call";
+    if (index < 0 || index >= size) throw new ArrayIndexOutOfBoundsException();
     String old = data[index];
     data[index] = element;
     return old;
@@ -77,7 +80,7 @@ public class SuperArray{
     return lastidx;
   }
   public void add(int index, String element){
-    if (index < 0 || index > size) System.out.println("Invalid index");
+    if (index < 0 || index > size) throw new ArrayIndexOutOfBoundsException();
     else{
       if (size == data.length) resize();
       String[] newArr = new String[data.length];
@@ -97,7 +100,7 @@ public class SuperArray{
     }
   }
   public String remove(int index){
-    if (index < 0 || index > size) return("Invalid index");
+    if (index < 0 || index > size) throw new ArrayIndexOutOfBoundsException("Invalid index");
     String[] newArr = new String[data.length];
     int idx2 = 0;
     String output = data[index];
