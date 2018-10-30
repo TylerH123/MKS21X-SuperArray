@@ -45,5 +45,7 @@ public class Driver{
     catch(IllegalArgumentException e){
       System.out.println("Fix index");
     }
+    arr.clear();
+    System.out.println(arr + "\ttoString() expected: []");
   }
 }

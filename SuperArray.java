@@ -13,7 +13,9 @@ public class SuperArray{
     size = 0;
   }
   public void clear(){
+    String[] newArr = new String[data.length];
     size = 0;
+    data = newArr;
   }
   public int size(){
     return size;
@@ -100,7 +102,7 @@ public class SuperArray{
     }
   }
   public String remove(int index){
-    if (index < 0 || index > size) throw new ArrayIndexOutOfBoundsException("Invalid index");
+    if (index < 0 || index > size) throw new ArrayIndexOutOfBoundsException();
     String[] newArr = new String[data.length];
     int idx2 = 0;
     String output = data[index];
