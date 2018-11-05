@@ -72,7 +72,7 @@ public class SuperArray{
     }
     return -1;
   }
-  public int lastIndex(String target){
+  public int lastIndexOf(String target){
     int lastidx = -1;
     for (int i = 0; i < size; i++){
       if (data[i].equals(target)){
@@ -117,20 +117,6 @@ public class SuperArray{
     data = newArr;
     return output;
   }
-  public void remove2(int index){
-    String[] newArr = new String[data.length];
-    int idx2 = 0;
-    String output = data[index];
-    for (int i = 0; i < size; i++){
-      if (i == index){
-        i++;
-      }
-      newArr[idx2] = data[i];
-      idx2++;
-    }
-    size--;
-    data = newArr;
-  }
   public boolean remove(String element){
     String[] newArr = new String[data.length];
     int idx = 0;
@@ -142,7 +128,7 @@ public class SuperArray{
       }
     }
     if (output == true){
-      remove2(idx);
+      remove(idx);
     }
     return output;
   }
